@@ -1,0 +1,23 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Skip if commit contains "skip-ci"
+    if: "!contains(github.event.head_commit.message, 'skip-ci')"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node v22
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - run: npm ci
+      - run: npm run lint:ci
