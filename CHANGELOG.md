@@ -15,8 +15,10 @@ and this project tries to adhere to
 	**Security** in case of vulnerabilities.
 -->
 
-## Unreleased
+## [0.1.0] - 2025-02-09
 
 ### Added
 
 - HTTP error wrapper class
+
+[0.1.0]: https://github.com/binyamin/http-errors/releases/tag/v0.1.0

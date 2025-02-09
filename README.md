@@ -14,6 +14,6 @@ open to suggestions and contributions.
 ## Legal
 
 All source-code is provided under the terms of
-[the MIT license](https://github.com/binyamin/http-error/blob/main/LICENSE).
+[the MIT license](https://github.com/binyamin/http-errors/blob/main/LICENSE).
 
 Copyright 2025 Binyamin Aron Green.
