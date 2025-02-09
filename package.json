@@ -1,0 +1,33 @@
+{
+	"name": "@binyamin/http-errors",
+	"private": true,
+	"type": "module",
+	"version": "0.1.0",
+	"license": "MIT",
+	"author": "Binyamin Aron Green (https://binyam.in/)",
+	"main": "src/index.ts",
+	"module": "src/index.ts",
+	"scripts": {
+		"lint": "biome check && size-limit",
+		"lint:ci": "biome ci && size-limit",
+		"fmt": "biome format --write"
+	},
+	"dependencies": {
+		"@std/http": "npm:@jsr/std__http"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@size-limit/preset-small-lib": "^11.1.6",
+		"size-limit": "^11.1.6"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/binyamin/http-errors"
+	},
+	"size-limit": [
+		{
+			"path": "src/index.ts",
+			"limit": "1.5 kb"
+		}
+	]
+}
