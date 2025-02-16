@@ -27,4 +27,4 @@ and this project tries to adhere to
 
 - HTTP error wrapper class
 
-[0.1.0]: https://github.com/binyamin/http-errors/releases/tag/v0.1.0
+[0.1.0]: https://github.com/binyamin/http-error/releases/tag/v0.1.0
