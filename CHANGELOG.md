@@ -15,6 +15,12 @@ and this project tries to adhere to
 	**Security** in case of vulnerabilities.
 -->
 
+## Unreleased
+
+### Fixed
+
+- No longer depend on [JSR](https://jsr.io/). Bun v1.2.2 failed to resolve JSR dependencies.
+
 ## [0.1.0] - 2025-02-09
 
 ### Added

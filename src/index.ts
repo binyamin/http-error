@@ -3,7 +3,7 @@ import {
 	STATUS_TEXT,
 	type ErrorStatus,
 	type StatusText,
-} from '@std/http/status';
+} from './status';
 
 export interface HttpErrorOptions extends ErrorOptions {
 	expose?: boolean;

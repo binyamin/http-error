@@ -12,9 +12,6 @@
 		"lint:ci": "biome ci && size-limit",
 		"fmt": "biome format --write"
 	},
-	"dependencies": {
-		"@std/http": "npm:@jsr/std__http"
-	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@size-limit/preset-small-lib": "^11.1.6",
