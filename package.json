@@ -2,7 +2,7 @@
 	"name": "@binyamin/http-error",
 	"private": true,
 	"type": "module",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"license": "MIT",
 	"author": "Binyamin Aron Green (https://binyam.in/)",
 	"main": "src/index.ts",
