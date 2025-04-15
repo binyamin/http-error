@@ -15,6 +15,12 @@ and this project tries to adhere to
 	**Security** in case of vulnerabilities.
 -->
 
+## Unreleased
+
+### Changed
+
+- Extract return type of `HttpError.toJSON()` to TS interface
+
 ## [0.1.1] - 2025-02-16
 
 ### Fixed

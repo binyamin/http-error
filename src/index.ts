@@ -3,22 +3,24 @@ import {
 	STATUS_TEXT,
 	type ErrorStatus,
 	type StatusText,
-} from './status';
+} from './status.ts';
 
 export interface HttpErrorOptions extends ErrorOptions {
 	expose?: boolean;
 	data?: Record<string, unknown>;
 }
 
+export interface HttpErrorPayload {
+	name: Pick<StatusText, ErrorStatus>[ErrorStatus];
+	code: ErrorStatus;
+	message?: string;
+	data?: Record<string, unknown>;
+}
+
 export class HttpError extends Error {
 	#status: ErrorStatus;
 	#expose: boolean;
-	#json: {
-		name: Pick<StatusText, ErrorStatus>[ErrorStatus];
-		code: ErrorStatus;
-		message?: string;
-		data?: Record<string, unknown>;
-	};
+	#json: HttpErrorPayload;
 
 	constructor(
 		status: ErrorStatus = 500,
@@ -50,11 +52,15 @@ export class HttpError extends Error {
 		return this.#expose;
 	}
 
-	toJSON() {
+	toJSON(): HttpErrorPayload {
 		return this.#json;
 	}
 
-	static from(error: Error, status: ErrorStatus = 500) {
+	static from(error: Error, status: ErrorStatus = 500): HttpError {
+		if (error instanceof HttpError) {
+			return error;
+		}
+
 		return new HttpError(status, error.message, {
 			cause: error,
 		});
