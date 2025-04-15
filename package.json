@@ -13,9 +13,9 @@
 		"fmt": "biome format --write"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"@size-limit/preset-small-lib": "^11.1.6",
-		"size-limit": "^11.1.6"
+		"@biomejs/biome": "1.9.4",
+		"@size-limit/preset-small-lib": "^11.2.0",
+		"size-limit": "^11.2.0"
 	},
 	"repository": {
 		"type": "git",
